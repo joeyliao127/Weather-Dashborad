@@ -64,4 +64,7 @@ function countryData(country) {
 }
 
 const Data = fetchAPI();
-countryData(country);
+// const taipei = countryData("臺北市");
+// const newcity = countryData("新北市");
+// console.log(taipei)
+// console.log(newcity)
