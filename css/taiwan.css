@@ -1,0 +1,28 @@
+svg {
+  height: 500px;
+}
+
+body {
+  background-color: #222;
+}
+
+path,
+polygon[id],
+g[id] {
+  stroke: #fff;
+  fill: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    fill: yellow;
+    transform: translate(-5px, -5px);
+  }
+}
+
+path[data-active="true"],
+polygon[data-active="true"],
+g[data-active="true"] {
+  fill: yellow;
+  transform: translate(-5px, -5px);
+}
