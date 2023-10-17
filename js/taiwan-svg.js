@@ -8,9 +8,19 @@ console.table("Groups:", group);
 function handleClickCitiesEvent(citiesBlocks) {
   citiesBlocks.forEach((city) => {
     city.addEventListener("click", function (e) {
-      console.log(e.target.id);
+      console.log("User clicked :", e.target.id, "city");
+      switchStatusOfCities(city);
     });
   });
+}
+
+function switchStatusOfCities(nextActiveCity) {
+  const lastActiveCity = document.querySelector(".city__active");
+  console.log("Current active city name:", lastActiveCity.id);
+  lastActiveCity.classList.remove("city__active");
+  console.log("Removed class name 'city__active' from current city");
+  nextActiveCity.classList.add("city__active");
+  console.log("Now current active city is", nextActiveCity.id);
 }
 
 handleClickCitiesEvent(group);

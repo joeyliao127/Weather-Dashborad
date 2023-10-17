@@ -1,28 +1,27 @@
 svg {
   height: 500px;
+  fill: #d3dcf2;
 }
 
 body {
-  background-color: #222;
+  background-color: #b09bbb;
 }
 
 path,
-polygon[id],
-g[id] {
-  stroke: #fff;
-  fill: transparent;
+polygon,
+g,
+g path {
+  stroke: #333;
   cursor: pointer;
   transition: all 0.3s;
 
   &:hover {
-    fill: yellow;
+    fill: #0465db;
     transform: translate(-5px, -5px);
   }
 }
 
-path[data-active="true"],
-polygon[data-active="true"],
-g[data-active="true"] {
-  fill: yellow;
+.city__active {
+  fill: #0465db !important;
   transform: translate(-5px, -5px);
 }
