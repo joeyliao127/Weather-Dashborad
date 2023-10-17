@@ -1,4 +1,4 @@
-// const country = "臺北市";
+const country = "臺北市";
 const CWB_API_KEY = "CWA-26B39C5D-83DA-4330-A10E-F13F446664FF";
 async function fetchAPI() {
   const response = await fetch(
@@ -38,7 +38,7 @@ async function fetchAPI() {
         if (text === " ") {
           text = "0";
         }
-        result[countryName][factorName].push(text)
+        result[countryName][factorName].push(text);
         index += 2;
       }
     });
@@ -50,7 +50,7 @@ async function fetchAPI() {
 }
 
 async function countryData(country) {
-  const result = {}
+  const result = {};
   const data = await Data;
   result["MaxT"] = data[country]["MaxT"];
   result["MinT"] = data[country]["MinT"];
@@ -64,4 +64,4 @@ async function countryData(country) {
 
 const Data = fetchAPI();
 console.log("data:");
-// countryData(country);
+countryData(country);
