@@ -5,103 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/taiwan.css" />
   </head>
   <body>
-    <img class="city_BG" src="/images/city_BG.jpg" />
-    <section id="main_content">
-      <div class="city_container">
-        <div class="Taiwan_map">
-          <img src="/images/tset_map.png" />
-        </div>
-
-        <div class="city_info">
-          <p class="city_day">
-            Thursday<span>, </span><span class="city_month">December</span>
-          </p>
-          <!-- 可以直接寫 cityDayElement.textContent = 日 + ", "+ 月;-->
-          <p class="city_name">臺北市</p>
-        </div>
-
-        <div class="weather_info">
-          <div class="item1">
-            <p class="temperature">
-              8<span class="city_font1 font-lighter font-size80">°</span>
-            </p>
-            <div class="T_pic"><img src="/images/cloudy.png" /></div>
-            <p class="wx">
-              晴時多雲<span> /</span> <span class="WxValue">4</span
-              ><span>mph</span>
-            </p>
-          </div>
-
-          <div class="item2">
-            <p>
-              最高溫<span class="MaxT">6</span><span>°</span> <span> </span
-              ><span>最低溫</span><span class="MinT">5</span><span>°</span>
-            </p>
-          </div>
-
-          <div class="item2">
-            <p>十二小時降雨機率 <span class="PoP12h"></span>70<span>%</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="weeks_container">
-      <div class="weeks">
-        <div class="week">
-          <div class="day">Mon</div>
-          <div class="pic">
-            <img src="/images/sunny.png" />
-          </div>
-          <div class="week_T">-8<span>°</span></div>
-        </div>
-        <div class="week">
-          <div class="day">Tue</div>
-          <div class="pic">
-            <img src="/images/sunny.png" />
-          </div>
-          <div class="week_T">-8<span>°</span></div>
-        </div>
-        <div class="week">
-          <div class="day">Wed</div>
-          <div class="pic">
-            <img src="/images/sunny.png" />
-          </div>
-          <div class="week_T">-8<span>°</span></div>
-        </div>
-        <div class="week current_shadow">
-          <div class="day current_status">Thu</div>
-          <div class="pic">
-            <img src="/images/sunny.png" />
-          </div>
-          <div class="week_T current_status">-8<span>°</span></div>
-        </div>
-        <div class="week">
-          <div class="day">Fri</div>
-          <div class="pic">
-            <img src="/images/sunny.png" />
-          </div>
-          <div class="week_T">-8<span>°</span></div>
-        </div>
-        <div class="week">
-          <div class="day">Sat</div>
-          <div class="pic">
-            <img src="/images/sunny.png" />
-          </div>
-          <div class="week_T">-8<span>°</span></div>
-        </div>
-        <div class="week">
-          <div class="day">Sun</div>
-          <div class="pic">
-            <img src="/images/sunny.png" />
-          </div>
-          <div class="week_T">-8<span>°</span></div>
-        </div>
-      </div>
-    </section>
     <script src="/js/getOpenData.js"></script>
     <script src="/js/Bot.js"></script>
+    <script src="./js/taiwan-svg.js"></script>
   </body>
 </html>
