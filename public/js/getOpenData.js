@@ -1,4 +1,4 @@
-// const country = "臺北市";
+//const country = "臺北市";
 const CWB_API_KEY = "CWA-26B39C5D-83DA-4330-A10E-F13F446664FF";
 async function fetchAPI() {
   const response = await fetch(
@@ -65,3 +65,22 @@ async function countryData(country) {
 const Data = fetchAPI();
 console.log("data:");
 // countryData(country);
+
+//botMessage
+const country_set = "臺北市";
+function DiscordMessage(){
+  countryData(country_set).then(source => {
+      let headers = {
+          "Content-Type": "application/json"
+      }
+      fetch("/api/message",{
+          method: "POST",
+          headers: headers,
+          body: JSON.stringify(source)
+      }).then(response => response.json()).then(data => {
+          console.log(data)
+      }).catch(error => {
+          console.log(error)
+      })
+  });
+}
