@@ -65,3 +65,22 @@ async function countryData(country) {
 const Data = fetchAPI();
 console.log("data:");
 // countryData(country);
+
+//botMessage
+function DiscordMessage(){
+  countryData(country).then(source => {
+      let headers = {
+          "Content-Type": "application/json"
+      }
+
+      fetch("/api/message",{
+          method: "POST",
+          headers: headers,
+          body: JSON.stringify(source)
+      }).then(response => response.json()).then(data => {
+          console.log(data)
+      }).catch(error => {
+          console.log(error)
+      })
+  });
+}
