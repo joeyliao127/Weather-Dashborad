@@ -1,4 +1,4 @@
-// const country = "臺北市";
+const country = "臺北市";
 const CWB_API_KEY = "CWA-26B39C5D-83DA-4330-A10E-F13F446664FF";
 async function fetchAPI() {
   const response = await fetch(
