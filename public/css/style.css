@@ -1,0 +1,549 @@
+/* body {
+  margin: 0;
+  padding: 0;
+}
+.city_font1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: Raleway Thin;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.city_font2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+.week_font {
+  color: #666;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+.font-lighter {
+  font-weight: 100;
+}
+.font-size80 {
+  font-size: 80px;
+}
+.font-size50 {
+  font-size: 50px;
+}
+.city_BG {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  box-shadow: 0 0 10px#000000;
+}
+.city_container {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+.Taiwan_map {
+  display: flex;
+  padding: 80px 40px 40px 40px;
+  flex: 1;
+}
+.Taiwan_map img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.city_info {
+  text-align: center;
+  flex: 1;
+}
+.city_day {
+  margin-top: 50px;
+  margin-bottom: 0;
+  color: #ffffff;
+  text-align: center;
+  font-family: Raleway Thin;
+  font-size: 30px;
+  font-weight: 100;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.city_name {
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+.weather_info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.item1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  height: auto;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  align-self: flex-end;
+  position: relative;
+}
+
+.item1 img {
+  width: 120px;
+  position: absolute;
+  left: 110px;
+}
+
+.temperature {
+  width: 50%;
+  height: 90px;
+  margin: 0;
+  text-align: right;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  font-weight: lighter;
+}
+
+.wx {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-family: Raleway Thin;
+  font-size: 30px;
+}
+
+.item2 {
+  display: flex;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  margin-top: 40px;
+  height: 150px;
+  align-items: center;
+  text-align: left;
+  border-radius: 20px;
+  background-color: #9468d5;
+  opacity: 90%;
+}
+
+.item2 p {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  display: inline-block;
+  padding: 0 50px;
+}
+.weeks {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background-color: aliceblue;
+}
+.week {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.day,
+.pic,
+.week_T {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pic img {
+  width: 100px;
+  height: auto;
+}
+.day {
+  color: #666;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+.week_T {
+  color: #666;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+}
+.current_status {
+  color: #3c82fb;
+  font-size: 50px;
+}
+.current_shadow {
+  box-shadow: 0 0 10px#3c82fb;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .pic img {
+    width: 85px;
+    height: auto;
+  }
+  .current_status {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .city_container {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .city_BG {
+    height: 1250px;
+    object-fit: cover;
+  }
+  .city_info {
+    width: 100%;
+    flex: none;
+    order: 1;
+  }
+
+  .weather_info {
+    order: 2;
+    flex: none;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .Taiwan_map {
+    order: 4;
+    flex: none;
+    width: 100%;
+    height: 800px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .Taiwan_map img {
+    width: 100%;
+    height: auto;
+  }
+
+  .city_name {
+    margin-bottom: 0;
+  }
+
+  .item1 {
+    order: 3;
+    width: 100%;
+    flex: none;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .T_pic {
+    flex: 1;
+    position: relative;
+  }
+  .item1 img {
+    width: 120px;
+    left: -30px;
+  }
+
+  .item2 {
+    display: flex;
+    order: 5;
+    width: 45%;
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .item2 p {
+    font-size: 23px;
+    padding: 0 20px;
+  }
+
+  .weeks {
+    flex-direction: column;
+    height: auto;
+  }
+  .week {
+    flex: none;
+    flex-direction: row;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+  }
+} */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  overflow: -moz-hidden-unscrollable;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 2rem;
+  -ms-overflow-style: none;
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+
+  background: url("../images/city_BG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: cover;
+  /* background-color: #af9abb; */
+
+  &:-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#main_content {
+  flex-grow: 1;
+}
+
+.city_container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.weather_info {
+  padding: 2.5rem 2.5rem 0 2.5rem;
+  width: 100%;
+}
+
+.top_box {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  padding: 2rem 0;
+}
+
+.city_info {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.weeks {
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+  row-gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.week {
+  padding: 2rem 4rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.day {
+  padding-bottom: 1rem;
+}
+
+#current-city-temperature {
+  font-size: 6.8rem;
+}
+
+.txt-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.cta {
+  font-size: 5.2rem;
+  font-weight: 600;
+}
+
+.cta_secondary {
+  font-size: 2.8rem;
+}
+
+.cta_temperature-high {
+  color: #ea580c;
+}
+
+.cta_temperature-low {
+  color: #0ea5e9;
+}
+
+.icon-weather {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.select-city {
+  display: none;
+}
+
+.buttons {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .svg_taiwan {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background-size: auto;
+  }
+  .week {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .city_container {
+    grid-template-columns: 1fr;
+  }
+
+  .Taiwan_map {
+    display: none;
+  }
+
+  .select-city {
+    display: inline;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .top-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+  }
+
+  .week {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-size: cover;
+  }
+
+  .weather_info {
+    height: 100vh;
+    padding: 2rem 1rem 0 1rem;
+  }
+
+  .cta {
+    font-size: 3rem;
+  }
+
+  #current-city-temperature {
+    font-size: 3rem;
+  }
+
+  .city_container {
+    display: block;
+  }
+
+  .city_info {
+    padding-top: 4rem;
+  }
+
+  .bottom-box {
+    position: relative;
+  }
+  .weeks {
+    display: flex;
+    overflow: scroll;
+  }
+
+  .week {
+    display: none;
+  }
+
+  .txt-box {
+    padding: 1rem 1rem 2rem 1rem;
+    gap: 0;
+  }
+
+  .select-city {
+    top: -1rem;
+  }
+
+  .temperature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .buttons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .btn-outer {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  .btn {
+    width: 3rem;
+    height: 3rem;
+    fill: transparent;
+    stroke: #000;
+  }
+}
+
+.active-day {
+  display: block;
+}
