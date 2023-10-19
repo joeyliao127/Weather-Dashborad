@@ -6,7 +6,6 @@ const formCitySelect = document.querySelector("#citySelect");
 
 const today = new Date();
 const day = today.getDay() - 1;
-console.log(day);
 const date = today.getDate();
 let mobileDayCount = 0;
 
@@ -83,7 +82,6 @@ async function getClickedCityData(clickedCityName) {
     const cityData = await countryData(clickedCityName);
     console.log(`Katlyn : ${clickedCityName}'s weather data :`);
     console.table(cityData);
-    console.log(cityData[day]);
     renderCurrentCityDetails(
       cityData["T"][day],
       cityData["Wx"][day],
@@ -134,13 +132,13 @@ function renderCurrentCityWeeksInfos(weeksAverageTemperature, WxValue) {
 
 function setWeatherIcon(currentDayImgElement, currentWxValue) {
   if (currentWxValue > 1 && currentWxValue <= 3) {
-    currentDayImgElement.setAttribute("src", "/images/cloudy-and-sunny.png");
+    currentDayImgElement.setAttribute("src", "../images/cloudy-and-sunny.png");
   } else if (currentWxValue > 3 && currentWxValue <= 7) {
-    currentDayImgElement.setAttribute("src", "/images/cloudy-2.png");
+    currentDayImgElement.setAttribute("src", "../images/cloudy-2.png");
   } else if (currentWxValue > 7) {
-    currentDayImgElement.setAttribute("src", "/images/rainy.png");
+    currentDayImgElement.setAttribute("src", "../images/rainy.png");
   } else {
-    currentDayImgElement.setAttribute("src", "/images/sunny_day.png");
+    currentDayImgElement.setAttribute("src", "../images/sunny_day.png");
   }
 }
 
