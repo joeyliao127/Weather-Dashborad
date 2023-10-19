@@ -6,7 +6,7 @@ import requests
 
 load_dotenv()
 end_point=os.getenv("url")
-app = Flask(__name__, static_folder="public")
+app = Flask(__name__, static_folder="public", static_url_path="/")
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.json.ensure_ascii = False
 

@@ -1,27 +1,23 @@
 svg {
-  height: 500px;
-  fill: #d3dcf2;
-}
-
-body {
-  background-color: #b09bbb;
+  height: 100vh;
+  fill: #333;
 }
 
 path,
 polygon,
 g,
 g path {
-  stroke: #333;
+  stroke: #fff;
   cursor: pointer;
   transition: all 0.3s;
 
   &:hover {
-    fill: #0465db;
+    fill: #fcd34d;
     transform: translate(-5px, -5px);
   }
 }
 
 .city__active {
-  fill: #0465db !important;
+  fill: #fcd34d !important;
   transform: translate(-5px, -5px);
 }

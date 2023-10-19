@@ -2,7 +2,9 @@
 const CWB_API_KEY = "CWA-26B39C5D-83DA-4330-A10E-F13F446664FF";
 async function fetchAPI() {
   const response = await fetch(
-    "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=" + CWB_API_KEY);
+    "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=" +
+      CWB_API_KEY
+  );
   const data = await response.json();
   const countries = data.records.locations[0].location;
   const result = {};
@@ -38,7 +40,7 @@ async function fetchAPI() {
         if (text === " ") {
           text = "0";
         }
-        result[countryName][factorName].push(text)
+        result[countryName][factorName].push(text);
         index += 2;
       }
     });
@@ -50,8 +52,9 @@ async function fetchAPI() {
 }
 
 async function countryData(country) {
-  const result = {}
+  const result = {};
   const data = await Data;
+  result["T"] = data[country]["T"];
   result["MaxT"] = data[country]["MaxT"];
   result["MinT"] = data[country]["MinT"];
   result["PoP12h"] = data[country]["PoP12h"];
@@ -68,19 +71,22 @@ console.log("data:");
 
 //botMessage
 const country_set = "臺北市";
-function DiscordMessage(){
-  countryData(country_set).then(source => {
-      let headers = {
-          "Content-Type": "application/json"
-      }
-      fetch("/api/message",{
-          method: "POST",
-          headers: headers,
-          body: JSON.stringify(source)
-      }).then(response => response.json()).then(data => {
-          console.log(data)
-      }).catch(error => {
-          console.log(error)
+function DiscordMessage() {
+  countryData(country_set).then((source) => {
+    let headers = {
+      "Content-Type": "application/json",
+    };
+    fetch("/api/message", {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(source),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
       })
+      .catch((error) => {
+        console.log(error);
+      });
   });
 }
