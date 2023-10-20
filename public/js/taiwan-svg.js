@@ -118,6 +118,7 @@ function renderCurrentCityDetails(
   document.querySelector("#PoP12h").textContent = PoP12h;
   const iconElement = document.querySelector("#current-day-icon");
   setWeatherIcon(iconElement, wxValue);
+  changeBackgroud(wxValue);
 }
 
 function renderCurrentCityWeeksInfos(weeksAverageTemperature, WxValue) {
@@ -142,6 +143,23 @@ function setWeatherIcon(currentDayImgElement, currentWxValue) {
   } else {
     currentDayImgElement.setAttribute("src", "/images/sunny_day.png");
   }
+}
+
+function changeBackgroud(currentWxValue) {
+  let url;
+  if (currentWxValue > 1 && currentWxValue <= 3) {
+    //晴時多雲
+    url = "/images/mostly-clear.gif";
+  } else if (currentWxValue > 3 && currentWxValue <= 7) {
+    //cloudy
+    url = "/images/cloudy.gif";
+  } else if (currentWxValue > 7) {
+    url = "/images/rainy.gif";
+  } else {
+    url = "/images/sunny.gif";
+  }
+  const body = document.querySelector("body");
+  document.querySelector("body").style.backgroundImage = `url(${url})`;
 }
 
 function handleCarousel() {
