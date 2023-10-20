@@ -431,9 +431,9 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  body {
+  /* body {
     background-size: auto;
-  }
+  } */
   .week {
     width: 100%;
     flex-shrink: 0;
