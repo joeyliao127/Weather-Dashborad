@@ -5,7 +5,7 @@ const path = TaiwanSVG.querySelectorAll("path");
 const formCitySelect = document.querySelector("#citySelect");
 
 const today = new Date();
-const day = today.getDay() - 1;
+const day = today.getDay();
 console.log(day);
 const date = today.getDate();
 let mobileDayCount = 0;
